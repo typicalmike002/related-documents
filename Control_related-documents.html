@@ -61,7 +61,9 @@ _#-->
         <input type="text" id="document-srchBox" size="30">
         <input type="button" value="Search" class="qb-button" onclick="srch_event()">
 <!--#_
-window.initialQueryTemplate = typeof window.initialQueryTemplate === "undefined" ? ctx.DataProvider.get_queryTemplate() : window.initialQueryTemplate;
+window.initialQueryTemplate = typeof window.initialQueryTemplate === "undefined" 
+    ? ctx.DataProvider.get_queryTemplate() 
+    : window.initialQueryTemplate;
 window.srch_event = function() {
     var srchTextElement = document.getElementById("document-srchBox");
     ctx.ClientControl.page(1);
@@ -72,7 +74,6 @@ window.srch_event = function() {
         + '*'
     );
     ctx.DataProvider.issueQuery(ctx.DataProvider.get_queryTemplate());
-    console.log(ctx.DataProvider.get_queryTemplate());
 }
 _#-->
         <table class="document-display" id="_#= tableId =#_">
@@ -152,7 +153,6 @@ _#-->
 <!--#_
     }
 }
-window.test = ctx;
 _#-->
 
     </div>
